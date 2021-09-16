@@ -1,3 +1,130 @@
 body {
     margin: 0;
 }
+
+main form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 60px;
+    max-width: 400px;
+    background-color: #363636;
+}
+
+main form div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+main form .gender {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+    grid-template-columns: auto auto;
+    grid-template-row: auto auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+main form .gender .genero {
+    width: 50%;
+    -ms-grid-row: 2;
+    grid-row: 2;
+}
+
+main form label {
+    margin-bottom: 5px;
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+main form input {
+    margin-bottom: 15px;
+    font-family: "Roboto", sans-serif;
+    padding: 5px;
+    border: none;
+    color: #525c66;
+    font-size: 1em;
+    resize: horizontal;
+    border-radius: 4px;
+}
+
+main form input::-webkit-input-placeholder {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #363636;
+    text-transform: uppercase;
+    font-size: 0.5em;
+}
+
+main form input:-ms-input-placeholder {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #363636;
+    text-transform: uppercase;
+    font-size: 0.5em;
+}
+
+main form input::-ms-input-placeholder {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #363636;
+    text-transform: uppercase;
+    font-size: 0.5em;
+}
+
+main form input::placeholder {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #363636;
+    text-transform: uppercase;
+    font-size: 0.5em;
+}
+
+main form #btn-submit-form {
+    margin: 8% 15%;
+    display: block;
+    background-color: #000000;
+    padding: 10px 45px;
+    border: 0;
+    font-size: 1em;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+main form #btn-submit-form:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+@media (min-width: 768px) {
+    main form {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+    main form label {
+        font-size: 1.5em;
+    }
+    main form input {
+        font-size: 1.5em;
+    }
+}
