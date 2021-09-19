@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 /* Variables  CSS */
 :root {
+    /* Fuentes */
     --font-family: 'Roboto Condensed', sans-serif;
+    --font-title: 'Kaushan Script', cursive;
+    /* Colores */
     --primary-color: hsl(210, 25%, 73%);
     --primary-hover-color: hsl(209, 38%, 86%);
     --secondary-color: hsl(0, 0%, 21%);
@@ -38,19 +42,23 @@ body {
     display: none;
 }
 #menu-check:checked~#drop-menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 #drop-menu {
     display: none;
     position: absolute;
     right: 0.2rem;
+    background-color:var(--primary-color);
+    top: 2em;
 }
 #drop-menu > button {
     display: block;
     padding: 0.5rem 1.5rem;
     border: none;
-    background-color: var(--primary-color);
+    background-color: transparent;
     font-weight: bold;
+    border: 1px solid var(--secondary-color);
 }
 #drop-menu > button > a {
     text-decoration: none;
@@ -62,16 +70,19 @@ body {
 /* Estilos Personalizados - Registro */
 .title {
     font-size: 1.5em;
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: center;
+    font-family: var(--font-title);
+    background-color: var(--secondary-color);
+    color: white;
 }
 #form-registro > div {
     display: flex;
     flex-direction: column;
     margin: 0.75em;
 }
-#form-registro > label.genero {
-    display: inline-block;
+#form-registro > div.genero {
+    display: block;
 }
 ::placeholder {
     text-transform: uppercase;
@@ -85,12 +96,16 @@ body {
     border: none;
     border-radius: 0.25em;
     padding: 0.5em 1.5em;
+    cursor: pointer;
+}
+#form-registro > input[type="submit"]:hover {
+    background-color: var(--primary-hover-color);
 }
 /* Breakpoint Tableta */
 @media screen and (min-width: 641px) {
     #nav-menu {
         height: 2.5em;
-    } 
+    }
     #logo {
         height: 2.5em;
     }
@@ -98,8 +113,11 @@ body {
         display: none;
     }
     #drop-menu {
-        position: relative;
-        display: inline-block;
+        display: flex;
+        top: 0.5em;
+    }
+    #drop-menu > button {
+        border: none;
     }
     #form-registro {
         font-size: 1.25em;

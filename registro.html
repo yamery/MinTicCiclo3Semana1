@@ -68,6 +68,9 @@
                 <label for="menu-check" class="material-icons">menu</label>
                 <input id="menu-check" type="checkbox" name="menu-check">
                 <div id="drop-menu">
+                    <button id="btn-inicio" type="button">
+                        <a id="enlace-registro" href="index.html">Inicio</a>
+                    </button>
                     <button id="btn-registrar" type="button">
                         <a id="enlace-registro" href="registro.html">Registrarse</a>
                     </button>
@@ -81,32 +84,32 @@
             <span class="title">
                 Registro
             </span>
-            <div>
+            <div class="nombre">
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" placeholder="nombre" />
             </div>
-            <div>
-                <span>Genero</span>
-                <label class="genero">
-                    <input type="radio" name="genero" value="masculino" /> M
+            <div class="genero">
+                <span>Genero</span><br />
+                <label for="masculino">
+                    <input type="radio" id="masculino" name="genero" value="masculino" /> M
                 </label>
-                <label class="genero">
-                    <input type="radio" name="genero" value="femenino" /> F
+                <label for="femenino">
+                    <input type="radio" id="femenino" name="genero" value="femenino" /> F
                 </label>
             </div>
-            <div>
+            <div class="telefono">
                 <label for="telefono">Telefono</label>
                 <input type="tel" id="telefono" name="telefono" placeholder="000-0000-000" />
             </div>
-            <div>
+            <div class="direccion">
                 <label for="direccion">Direccion</label>
                 <input type="text" id="direccion" name="direccion" placeholder="direccion" />
             </div>
-            <div>
+            <div class="correo">
                 <label for="correo">Correo</label>
                 <input type="mail" id="correo" name="correo" placeholder="usuario@email.dominio" />
             </div>
-            <div>
+            <div class="clave">
                 <label for="clave">Contraseña</label>
                 <input type="password" id="clave" name="clave" placeholder="clave" />
             </div>
